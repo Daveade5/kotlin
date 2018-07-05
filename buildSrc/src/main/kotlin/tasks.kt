@@ -85,6 +85,7 @@ fun Project.projectTest(taskName: String = "test", body: Test.() -> Unit = {}): 
         "-ea",
         "-XX:+HeapDumpOnOutOfMemoryError",
         "-Xmx1600m",
+        "-XX:MaxMetaspaceSize=2048m",
         "-XX:+UseCodeCacheFlushing",
         "-XX:ReservedCodeCacheSize=128m",
         "-Djna.nosys=true"
